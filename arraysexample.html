@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in java script</title>
+</head>
+
+<body>
+    <center>
+        <h1> Arrays in javascript</h1>
+        <hr>
+        <hr>
+    </center>
+</body>
+<script type="text/javascript">
+    // array syntax
+    var bdivclass = new Array("s1", "s2", "s3", "s4");
+    var adivclass = ["s1", "s2", "s3", "s4"]
+    document.write("adivclass :" + adivclass[1] + "<br/>");
+    document.write("bdivclass :" + bdivclass[2]);
+
+    // array length
+    var numa = new Array(1, 2, 3, 4);
+    var numb = [11, 12, 13, 14, 15];
+    document.write("length of array :" + numa.length + "<br/>");
+    document.write("length of array :" + numb.length + "<br/>");
+
+    // for in loop
+    document.write("A div values :" + "<br/>");
+    for (var i in numa) {
+        document.write(numa[i] + "<br/>");
+    }
+
+    document.write("B div values :" + "<br/>");
+    for (var i in numb) {
+        document.write(numb[i] + "<br/>");
+    }
+
+    // array concat
+    var arr1 = numa.concat(numb);
+    document.write("concatenated array is : " + "<br/>");
+    for (var i in arr1) {
+        document.write(arr1[i] + "<br/>");
+    }
+
+    //push and pop operation
+    numb.push(23);
+    document.write("array elements  after push operation  :" + "<br/>");
+    for (var j in numb) {
+        document.write(numb[j] + "<br/>");
+    }
+    document.write("length of array :" + numb.length + "<br/>");
+
+    numb.pop(23);
+    document.write("array elements  after pop operation  :" + "<br/>");
+    for (var j in numb) {
+        document.write(numb[j] + "<br/>");
+    }
+    document.write("length of array :" + numb.length + "<br/>");
+
+
+</script>
+
+</html>
