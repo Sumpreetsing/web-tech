@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="mypage.php" method="post">
+        <label>Enter the value :</label>
+        <input type="text" name="txtvalue"><br>
+        <input type="button" name="btnsubmit" value="submit" onclick="throughjscode()">
+    </form>
+</body>
+
+</html>
+<script type="text/Javascript">
+    function throughjscode() {
+       
+        alert("js code is executed....!");
+        var confirmtruevalue=confirm("do you want to print msg");
+        if (confirmtruevalue===true) {
+            window.location="Greetingpage.js";
+        }
+        else{
+            window.location="firstpage.html";
+        }
+    }
+</script>
+<!-- # means page will redirect to the same page if it is mypage.php it will search for another php page -->
+<!-- if submit and onclick == both data submission and execution of js
+    if submit and no onclick== only data submissin -->
