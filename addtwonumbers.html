@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of two numbers</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Web based simple calculator</legend>
+            <table>
+                <tr>
+                    <td><label>Enter First number:</label></td>
+                    <td><input type="number" id="num1" ></td>
+                </tr>
+                <tr>
+                    <td><label>Enter second number:</label></td>
+                    <td><input type="number" id="num2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="addtwonumbers();">Add Numbers</button></td>
+                </tr>
+            </table>
+            <span id="result"></span>
+            <!-- text box by default returns string type value -->
+    </fieldset>
+</body>
+</html>
+<script type="text/javascript">
+    function addtwonumbers(){
+        var res=parseInt(document.getElementById('num1')).value+parseInt(document.getElementById('num2').value);
+        // document.write("The result of addition is :",res);
+        document.getElementById("result").innerText= "The sum of two numbers is "+res;
+    }
+</script>
