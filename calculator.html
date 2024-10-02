@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator demo</title>
+</head>
+<body>
+    <center>
+        <hr>
+        <h1>SIMPLE CALCULATOR</h1>
+        <hr>
+            <table>
+                <tr>
+                    <td><label>Enter first number</label></td>
+                    <td><input type="number" id="num1"></td>
+                </tr>
+                <tr>
+                    <td><label>Enter second number</label></td>
+                    <td><input type="number" id="num2"></td>
+                </tr>
+                <tr>
+                    <td><label>Select the operation :</label></td>
+                    <td>
+                        <select id="str">
+                            <option value="0">-operation-</option>
+                            <option value="1">Addition</option>
+                            <option value="2">Substraction</option>
+                            <option value="3">Multiplication</option>
+                            <option value="4">Division</option>
+                            <option value="5">Remainder</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" onclick="operations()"><button>Result</button></td>
+                </tr>
+            </table>
+            <span id="res"></span>
+</center>
+<script>
+    function operations(){
+        var n1=parseInt(document.getElementById("num1").value);
+        var n2=parseInt(document.getElementById("num2").value);
+        var s=document.getElementById('str');
+        var value=parseInt(s.value);
+        var text = s.options[s.selectedIndex].text;
+
+        if(value==1){
+            document.getElementById("res").innerHTML = "The result is: " + (n1+n2);
+        }
+        else if(value==2){
+            document.getElementById("res").innerHTML = "The result is: " + (n1-n2);
+        }
+        else if(value==3){
+            document.getElementById("res").innerHTML = "The result is: " + (n1*n2);
+        }
+        else if(value==4){
+            document.getElementById("res").innerHTML = "The result is: " + (n1/n2);
+        }
+        else if(value==5){
+            document.getElementById("res").innerHTML = "The result is: " + (n1%n2);
+        }
+        else{
+            document.getElementById("res").innerHTML =
+              "Operation not selected!";
+        }
+    }
+</script>
+</body>
+</html>
