@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customerinformation</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<label>Enter your name :</label>
+			<input type="text" name="username" id="name"><br>
+			<label>Enter your password :</label>
+			<input type="password" name="passwd" id="passwd"><br>
+			<input type="button" name="btnsubmit" value="submit" onclick="chkdata();">
+		</fieldset>
+	</form>
+</body>
+<script type="text/javascript">
+	function chkdata(){
+		var name=document.getElementById("name").value;
+		var passwd=document.getElementById("passwd").value;
+
+		if(name == "" && passwd == ""){
+			alert("please enter name and password");
+			return false;
+		}
+		if(name != "sdmcet" || passwd != "cse"){
+			alert("incorrect name or password");
+			return false;
+		}
+		if(name == "sdmcet" && passwd == "cse"){
+			alert("successfull...!");
+		}
+		alert(name.length);
+
+
+	}
+</script>
+</html>
