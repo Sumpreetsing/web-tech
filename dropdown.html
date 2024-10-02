@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <form action="">
+        <center>
+            <h3>Dropdown list with form tag</h3>
+            <label for="">select an open elective course</label>
+            <select name="ddlcourses">
+                <option type="text" value="0">--select course--</option>
+                <option type="text" value="1">web tech</option>
+                <option type="text" value="2">java</option>
+                <option type="text" value="3">machine learning</option>
+                <option type="text" value="4">data structure-</option>
+            </select><br>
+            <input type="button" value="submit" onclick="readandDisplayvalue(this.form)">
+        </center>
+        <span id="result"></span>
+    </form>
+</body>
+<script type="text/Javascript">
+    function readandDisplayvalue(frm) {
+        // document.getElementById("result").innerHTML= "selected course is" + frm.ddlcourses.text;
+        // if(frm.ddlcourses.value ==="1"){
+        //     document.getElementById("result").innerHTML= frm.ddlcourses.value;
+        // }
+
+
+        // if(frm.ddlcourses[1].selected){
+        //     document.getElementById("result").innerHTML= "web tech";
+        // }
+        // if(frm.ddlcourses[2].selected){
+        //     document.getElementById("result").innerHTML= "java";
+        // }
+        // if(frm.ddlcourses[3].selected){
+        //     document.getElementById("result").innerHTML= "machine learning";
+        // }
+        // if(frm.ddlcourses[4].selected){
+        //     document.getElementById("result").innerHTML= "data structure";
+        // }
+
+
+
+
+        for (var i=0;i<frm.ddlcourses.length;i++){
+            if(frm.ddlcourses[i].selected)
+             document.getElementById("result").innerHTML= "selected course is :" + frm.ddlcourses[i].text;
+        }
+    }
+
+
+
+
+</script>
+
+</html>
