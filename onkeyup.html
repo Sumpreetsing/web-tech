@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>length of string</title>
+</head>
+<body>
+		<label>Enter any string :</label>
+		<input type="text" name="strname" id="strname" onkeydown ="stringlength();">
+		<span id="result"></span>
+</body>
+</html>
+<script type="text/javascript">
+	function stringlength(){
+		var str=document.getElementById("strname").value;
+		document.getElementById("result").innerText= "length of string is " + str.length;
+	}
+</script>
